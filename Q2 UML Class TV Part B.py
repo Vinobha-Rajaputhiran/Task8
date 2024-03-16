@@ -41,14 +41,18 @@ class plasma(TV):#Child Class One
         self.energy_usage='High'
         self.Lifespan= 'Low'
         self.Refresh_rate= 'Slow'
-        self.viewingAngle= 90
-        self.Backlight= 'ON'
         self.channel = channel
         self.volume = volume
         self.brand = brand
 
+    def viewingAngle(self):
+        print("Viewing Angle is 180 degrees")
+        
+    def Backlight(self):
+        print("Backlight is OFF")
+
     def DisplayDetails1(self):
-        print("Volume:", self.volume, "Channel: ",self.channel, "Screen: ", self.screen, "Thickness: ", self.thickness, "Energy: ", self.energy_usage, "Lifespan: ", self.Lifespan, "Refresh_rate: ", self.Refresh_rate, "viewingAngle", self.viewingAngle, "Backlight: ", self.Backlight)
+        print("Volume:", self.volume, "Channel: ",self.channel, "Screen: ", self.screen, "Thickness: ", self.thickness, "Energy: ", self.energy_usage, "Lifespan: ", self.Lifespan, "Refresh_rate: ", self.Refresh_rate)
 
 
 class LED(TV):#Child Class Two
@@ -58,14 +62,18 @@ class LED(TV):#Child Class Two
         self.energy_usage='Low'
         self.Lifespan= 'High'
         self.Refresh_rate= 'Fast'
-        self.viewingAngle= 180
-        self.Backlight= 'OFF'
         self.channel = channel
         self.volume = volume
         self.brand = brand
 
+    def viewingAngle(self):
+        print("Viewing Angle is 90 degrees")
+        
+    def Backlight(self):
+        print("Backlight is ON")
+
     def DisplayDetails2(self):
-        print("Volume:", self.volume, "Channel: ",self.channel, "Screen: ", self.screen, "Thickness: ", self.thickness, "Energy: ", self.energy_usage, "Lifespan: ", self.Lifespan, "Refresh_rate: ", self.Refresh_rate, "viewingAngle", self.viewingAngle, "Backlight: ", self.Backlight)
+        print("Volume:", self.volume, "Channel: ",self.channel, "Screen: ", self.screen, "Thickness: ", self.thickness, "Energy: ", self.energy_usage, "Lifespan: ", self.Lifespan, "Refresh_rate: ", self.Refresh_rate)
 #The Methods from parent class is called as below:
 plasma1= plasma(23,5,'LG')
 plasma1.channel_change(12)
