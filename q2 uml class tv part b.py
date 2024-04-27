@@ -1,7 +1,9 @@
 #Task: Part - B
-#Inherit a TV class add additional properties like screen thickness, energy usage , Lifespan , Refresh rate , functionalities like viewingAngle , Backlight, DisplayDetails , which displays the detailed features of the TV
+#Inherit a TV class add additional properties like screen thickness, energy usage, Lifespan, Refresh rate, functionalities like viewingAngle, Backlight, DisplayDetails, which displays the detailed features of the TV
 #Multiple Inheritance is used here
-class TV:# Parent Class
+
+# Parent Class
+class TV:
     def __init__(self, brand, OnOFF_status, channel, volume):
         self.price = 1500
         self.inches = 23
@@ -30,11 +32,12 @@ class TV:# Parent Class
 
     def status(self):
         print(self.brand, "at channel", self.channel, "and at volume",  self.volume)
-
-set1=TV("Panasonic","On", 1,50)#Objects defined with default parameters
+#Objects defined with default parameters
+set1=TV("Panasonic","On", 1,50)
 set2=TV("Samsung","On", 1,50)
 
-class plasma(TV):#Child Class One
+#Child Class One
+class plasma(TV):
     def __init__(self, channel, volume, brand):
         self.screen='Wide'
         self.thickness= 24
@@ -54,8 +57,8 @@ class plasma(TV):#Child Class One
     def DisplayDetails1(self):
         print("Volume:", self.volume, "Channel: ",self.channel, "Screen: ", self.screen, "Thickness: ", self.thickness, "Energy: ", self.energy_usage, "Lifespan: ", self.Lifespan, "Refresh_rate: ", self.Refresh_rate)
 
-
-class LED(TV):#Child Class Two
+#Child Class Two
+class LED(TV):
     def __init__(self, channel, volume, brand):
         self.screen='Flat'
         self.thickness= 32
@@ -80,7 +83,8 @@ plasma1.channel_change(12)
 plasma1.volume_change(150)
 plasma1.status()
 plasma1.DisplayDetails1()
-print()#Line Break for viewing purposes
+print()
+#Line Break for viewing purposes
 LED1=LED(65, 77,'OnePlus')
 LED1.volume_change(12)
 LED1.channel_change(43)
